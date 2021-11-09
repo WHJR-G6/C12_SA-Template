@@ -12,7 +12,7 @@ platform2 = loadImage("images/platform2.png")
 platform3 = loadImage("images/platform3.png")
 platform4 = loadImage("images/platform4.png")
 platform5 = loadImage("images/platform5.png")
-platform6 = loadImage("images/platform6.png")
+
 
 }
 
@@ -62,7 +62,7 @@ function spawnPlatform(){
     var platforms = createSprite(250,0,50,50);
   platforms.velocityY = 4;
 
-  var r = Math.round(random(1,6))
+  
   switch (r){
     case 1 : platforms.addImage(platform1);
     break;
@@ -74,8 +74,7 @@ function spawnPlatform(){
     break;
     case 5 : platforms.addImage(platform5);
     break;
-    case 6 : platforms.addImage(platform6);
-    break;
+
   }
   platforms.collide(jack);
   platforms.scale = 0.1;
